@@ -1,12 +1,11 @@
 package Dist::Zilla::Plugin::JavaScript::Minifier;
 
 use Moose;
-use v5.10;
 use JavaScript::Minifier::XS qw( minify );
 use Dist::Zilla::File::FromCode;
 
 # ABSTRACT: Minify JavaScript in your dist.
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 
 with 'Dist::Zilla::Role::FileGatherer';
@@ -84,7 +83,10 @@ __PACKAGE__->meta->make_immutable;
 1;
 
 __END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -92,7 +94,7 @@ Dist::Zilla::Plugin::JavaScript::Minifier - Minify JavaScript in your dist.
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -152,4 +154,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
